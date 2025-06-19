@@ -215,6 +215,7 @@ yq -P -oy sample.json
 		createEvaluateSequenceCommand(),
 		createEvaluateAllCommand(),
 		completionCmd,
+		unityExtractCmd,
 	)
 	return rootCmd
 }

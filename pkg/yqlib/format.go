@@ -82,6 +82,11 @@ var INIFormat = &Format{"ini", []string{"i"},
 	func() Decoder { return NewINIDecoder() },
 }
 
+var UnityYamlFormat = &Format{"unity", []string{"u", "unity-yaml", "asset"},
+	func() Encoder { return NewYamlEncoder(ConfiguredYamlPreferences) },
+	func() Decoder { return NewUnityYamlDecoder(ConfiguredYamlPreferences) },
+}
+
 var Formats = []*Format{
 	YamlFormat,
 	JSONFormat,
@@ -96,6 +101,7 @@ var Formats = []*Format{
 	ShellVariablesFormat,
 	LuaFormat,
 	INIFormat,
+	UnityYamlFormat,
 }
 
 func (f *Format) MatchesName(name string) bool {

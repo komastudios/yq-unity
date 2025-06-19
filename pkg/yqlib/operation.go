@@ -98,6 +98,10 @@ var evalOpType = &operationType{Type: "EVAL", NumArgs: 1, Precedence: 52, Handle
 var mapValuesOpType = &operationType{Type: "MAP_VALUES", NumArgs: 1, Precedence: 52, Handler: mapValuesOperator, CheckForPostTraverse: true}
 
 var formatDateTimeOpType = &operationType{Type: "FORMAT_DATE_TIME", NumArgs: 1, Precedence: 50, Handler: formatDateTime}
+
+// Unity operators
+var unityNodesOpType = &operationType{Type: "UNITY_NODES", NumArgs: 0, Precedence: 50, Handler: unityGraphNodesOperator}
+var unitySpawnersOpType = &operationType{Type: "UNITY_SPAWNERS", NumArgs: 0, Precedence: 50, Handler: unitySpawnerDistancesOperator}
 var withDtFormatOpType = &operationType{Type: "WITH_DATE_TIME_FORMAT", NumArgs: 1, Precedence: 50, Handler: withDateTimeFormat}
 var nowOpType = &operationType{Type: "NOW", NumArgs: 0, Precedence: 50, Handler: nowOp}
 var tzOpType = &operationType{Type: "TIMEZONE", NumArgs: 1, Precedence: 50, Handler: tzOp}

@@ -229,6 +229,10 @@ var participleYqRules = []*participleYqRule{
 	{"Comment", `#.*`, nil, 0},
 
 	simpleOp("pivot", pivotOpType),
+	
+	// Unity operators
+	simpleOp("unity_nodes", unityNodesOpType),
+	simpleOp("unity_spawners", unitySpawnersOpType),
 }
 
 type yqAction func(lexer.Token) (*token, error)
